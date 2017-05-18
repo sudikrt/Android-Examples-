@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="24dp">
+            <Button
+                android:id="@+id/button_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 1"
+                android:padding="16dp"
+                android:visibility="gone"
+                android:layout_margin="8dp"
+                android:textColor="@android:color/white"
+                android:background="@android:color/holo_green_dark"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        android:background="@android:color/holo_orange_light"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        >
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:orientation="vertical"
+           android:layout_height="match_parent">
+
+           <android.support.v7.widget.AppCompatTextView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:text="Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text \n some text \n Some text "
+               android:padding="16dp"
+               android:textSize="16sp"/>
+       </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

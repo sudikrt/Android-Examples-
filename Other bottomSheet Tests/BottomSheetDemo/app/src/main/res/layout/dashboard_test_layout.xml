@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="RtlHardcoded">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/main.appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:id="@+id/main.collapsing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+    <com.github.florent37.diagonallayout.DiagonalLayout
+        android:id="@+id/diagonalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_250dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:elevation="10dp"
+        android:paddingBottom="@dimen/dimen_5dp"
+        app:diagonal_angle="10"
+        app:diagonal_direction="left"
+        app:diagonal_position="bottom">
+
+        <com.flaviofaria.kenburnsview.KenBurnsView
+            android:id="@+id/userAlbum_kbv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+    </com.github.florent37.diagonallayout.DiagonalLayout>
+
+    <FrameLayout
+        android:id="@+id/main.framelayout.title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@color/primary"
+        android:orientation="vertical"
+        app:layout_collapseMode="parallax"
+        app:layout_collapseParallaxMultiplier="0.3">
+
+        <LinearLayout
+            android:id="@+id/main.linearlayout.title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="bottom|center"
+                android:text="@string/quila_name"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:text="@string/quila_tagline"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </FrameLayout>
+    </android.support.design.widget.CollapsingToolbarLayout>
+</android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:behavior_overlapTop="30dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp">
+
+            <!--Profile Header-->
+            <RelativeLayout
+                android:id="@+id/header_profile_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ctrlFragments_LL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dimen_4dp"
+                    android:layout_marginEnd="@dimen/dimen_56dp"
+                    android:layout_marginStart="@dimen/dimen_56dp"
+                    android:layout_marginTop="@dimen/dimen_4dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button_wyker"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/dimen_26dp"
+                        android:layout_marginEnd="@dimen/dimen_1dp"
+                        android:background="@drawable/button_inactive_shape_left"
+                        android:text="@string/dashbrd_wyker"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button_wykee"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/dimen_26dp"
+                        android:layout_marginStart="@dimen/dimen_1dp"
+                        android:background="@drawable/button_inactive_shape_right"
+                        android:text="@string/dashbrd_wykee"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/score_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header_profile_rl">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/dash_wykescore"
+                    style="@style/Wyke.TextAppearance.AppCompat.ExxtraLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_2dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/accent"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/dash_wykeescore_label"
+                    style="@style/Wyke.TextAppearance.AppCompat.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/dash_wykescore"
+                    android:gravity="center"
+                    android:text="Wyke Score"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/badge_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/score_rl"
+                android:background="@color/semiTransparentGrey">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dimen_2dp"
+                    android:paddingTop="@dimen/dimen_2dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/mobile"
+                        android:layout_width="@dimen/dimen_24dp"
+                        android:layout_height="@dimen/dimen_24dp"
+                        android:layout_marginEnd="@dimen/dimen_8dp"
+                        android:layout_marginStart="@dimen/dimen_8dp"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:tint="@color/grey"
+                        app:srcCompat="@drawable/ic_mobile_iphone" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/email"
+                        android:layout_width="@dimen/dimen_24dp"
+                        android:layout_height="@dimen/dimen_24dp"
+                        android:layout_marginEnd="@dimen/dimen_8dp"
+                        android:layout_marginStart="@dimen/dimen_8dp"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:tint="@color/grey"
+                        app:srcCompat="@drawable/ic_open_email_letter" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/aadhaar"
+                        android:layout_width="@dimen/dimen_24dp"
+                        android:layout_height="@dimen/dimen_24dp"
+                        android:layout_marginEnd="@dimen/dimen_8dp"
+                        android:layout_marginStart="@dimen/dimen_8dp"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:tint="@color/grey"
+                        app:srcCompat="@drawable/ic_aadhar" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/payment"
+                        android:layout_width="@dimen/dimen_24dp"
+                        android:layout_height="@dimen/dimen_24dp"
+                        android:layout_marginEnd="@dimen/dimen_8dp"
+                        android:layout_marginStart="@dimen/dimen_8dp"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:tint="@color/grey"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_wallet_money" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/dateofbirth"
+                        android:layout_width="@dimen/dimen_24dp"
+                        android:layout_height="@dimen/dimen_24dp"
+                        android:layout_marginEnd="@dimen/dimen_8dp"
+                        android:layout_marginStart="@dimen/dimen_8dp"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:tint="@color/grey"
+                        app:srcCompat="@drawable/ic_date_of_birth_profes" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/active_dash_board"
+                        android:layout_width="@dimen/dimen_24dp"
+                        android:layout_height="@dimen/dimen_24dp"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:tint="@color/grey"
+                        app:srcCompat="@drawable/ic_active_dashboard" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/pro_badge"
+                        android:layout_width="@dimen/dimen_24dp"
+                        android:layout_height="@dimen/dimen_24dp"
+                        android:layout_marginEnd="@dimen/dimen_8dp"
+                        android:layout_marginStart="@dimen/dimen_8dp"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:tint="@color/grey"
+                        app:srcCompat="@drawable/ic_pro_badge" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/dashbrd_fragment_stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/badge_rl" />
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main.toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        app:layout_anchor="@id/main.framelayout.title"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:title=""
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <Space
+                android:layout_width="@dimen/image_final_width"
+                android:layout_height="@dimen/image_final_width"
+                />
+
+            <TextView
+                android:id="@+id/main.textview.title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="@string/quila_name2"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                />
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_width"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/ic_avatar_male"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="2dp"
+        app:finalHeight="@dimen/image_final_width"
+        app:finalYPosition="2dp"
+        app:layout_behavior="com.ibridgeventures.wyke.serviceutilities.AvatarImageBehavior"
+        app:startHeight="2dp"
+        app:startToolbarPosition="2dp"
+        app:startXPosition="2dp"/>
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
