@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "905065135574",
+    "firebase_url": "https://fcmchatting-60615.firebaseio.com",
+    "project_id": "fcmchatting-60615",
+    "storage_bucket": "fcmchatting-60615.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905065135574:android:616d63e286da43b6",
+        "android_client_info": {
+          "package_name": "com.example.foolishguy.fcm_chatting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905065135574-j6mm7reee1hhr1h0fr2el2rjovsjefcp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.foolishguy.fcm_chatting",
+            "certificate_hash": "9DC3A86B1F8BC71E0334CD18F5CF8E9CFBB6AB07"
+          }
+        },
+        {
+          "client_id": "905065135574-ncheiao68ap5mae778bt1mbi37jjf7oa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHYGCYObXu3YB1hwV2lKDTci87oheSF7I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "905065135574-ncheiao68ap5mae778bt1mbi37jjf7oa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
