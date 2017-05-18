@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@android:color/transparent"
+    tools:context="com.geeksynergy.swipetest_1.MainActivity">
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Some Text"
+        android:gravity="center"
+        android:padding="4dp"
+        style="@style/Base.TextAppearance.AppCompat.Medium"
+        android:id="@+id/test_text"/>
+
+    <com.wenchao.cardstack.CardStack
+        android:layout_below="@+id/test_text"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:padding = "20dp"
+        app:card_enable_loop="true"
+        app:card_enable_rotation="true"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/container"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resetstack"
+            android:text="Reset"/>
+
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:visibility="gone"
+            android:id="@+id/input_visible_card_num"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OKAY"
+            android:visibility="gone"
+            android:id="@+id/btn_okay"/>
+    </LinearLayout>
+
+</RelativeLayout>
